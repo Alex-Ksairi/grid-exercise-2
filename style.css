@@ -1,0 +1,128 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* code here */
+html {
+    font-size: 62.5%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.container > * {
+    font-family: "Helvetica";
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 0 0;
+
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: repeat(3, 200px) repeat(2, 150px) 100px 200px;
+    gap: 10px;
+
+    grid-template-areas: 
+                        "h1 h1"
+                        "blog1 blog3"
+                        "blog1 blog4"
+                        "blog2 blog4"
+                        "blog2 blog5"
+                        "blog2 ."
+                        "foot foot";
+}
+
+h1 {
+    grid-area: h1;
+    font-size: 30px;
+    text-align: center;
+    line-height: 200px;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+h2, h4 {
+    padding-bottom:  20px;
+    text-transform: uppercase;
+}
+
+.blog1 {
+    grid-area: blog1;
+    background-color: #fff;
+}
+
+.blog2 {
+    grid-area: blog2;
+    background-color: #fff;
+}
+
+.blog3 {
+    grid-area: blog3;
+    background-color: #fff;
+    text-transform: capitalize;
+}
+
+.blog3 p, .blog5 p {
+    font-size: 12px;
+}
+
+.blog4 {
+    grid-area: blog4;
+    background-color: #fff;
+    text-transform: capitalize;
+}
+
+.blog5 {
+    grid-area: blog5;
+    background-color: #fff;
+    text-transform: capitalize;
+}
+
+footer {
+    grid-area: foot;
+    background-color: #dddddd;
+    font-size: 30px;
+    text-align: center;
+    line-height: 200px;
+}
+
+.container .blog4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .blog4 img {
+    width: 60%;
+    height: 75px;
+}
+
+.container .blog1 img, .container .blog2 img  {
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    padding-bottom: 20px;
+}
+
+.container .blog3 img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+}
+
+
+
+
